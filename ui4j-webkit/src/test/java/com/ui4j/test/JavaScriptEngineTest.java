@@ -9,7 +9,7 @@ import com.ui4j.api.browser.BrowserFactory;
 import com.ui4j.api.browser.BrowserType;
 import com.ui4j.api.browser.Page;
 
-public class JavasciptEngineTest {
+public class JavaScriptEngineTest {
 
 	private static Page page;
 
