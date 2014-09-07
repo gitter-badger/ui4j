@@ -522,4 +522,9 @@ public class ElementTest {
     	Element div2 = div.append(emptyElement);
     	Assert.assertTrue(div == div2);
     }
+
+    @Test public void t46_closest() {
+        Element div = document.parseHTML("<div><label>Name</label><div><input id='txtName' /><span><input id='txtSurname' /></span></div></div>").get(0);
+        Assert.assertEquals("txtName", div.closest("input").getId());
+    }
 }

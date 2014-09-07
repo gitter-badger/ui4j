@@ -835,6 +835,24 @@ public class WebKitElement implements Element, EventTarget {
 	}
 
     @Override
+    public Element closest(String selector) {
+        HTMLElementImpl el = getHtmlElement();
+        HTMLElementImpl parent = null;
+        while (el != null) {
+            parent = (HTMLElementImpl) el.getParentElement();
+            if (parent != null) {
+                Element pElement = ((WebKitPageContext) context).createElement(parent, document, engine);
+                Element found = context.getSelectorEngine().query(pElement, selector);
+                if (found != null) {
+                    return found;
+                }
+            }
+            el = parent;
+        }
+        return null;
+    }
+
+    @Override
     public String toString() {
         return "WebKitElement [element=" + this.getInnerHTML() + "]";
     }

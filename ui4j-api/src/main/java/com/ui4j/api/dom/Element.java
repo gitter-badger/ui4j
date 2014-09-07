@@ -177,4 +177,6 @@ public interface Element extends Node {
     List<Element> getSiblings();
 
     boolean isEmpty();
+
+    Element closest(String selector);
 }
