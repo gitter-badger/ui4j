@@ -224,11 +224,6 @@ public class WebKitPage implements Page, PageView, JavaScriptEngine {
 
     @Override
     public void waitUntilDocReady(int timeout, TimeUnit unit) {
-        String state = getDocumentState();
-        if ("complete".equals(state)) {
-            LOG.info("Document is already loaded, no need to wait DocReady");
-            return;
-        }
         LOG.debug("Waiting document ready, timeout=" + timeout + " " + unit.toString());
         CountDownLatch latch = new CountDownLatch(1);
         DocumentListener listener = new SyncDocumentListener(latch);
