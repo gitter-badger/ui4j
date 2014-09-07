@@ -110,7 +110,7 @@ public class WebKitProxy {
 								.subclass(klass)
 								.method(MethodMatchers.any()
 												.and(MethodMatchers.not(MethodMatchers.isDeclaredByAny(Object.class))
-												.and(MethodMatchers.not(MethodMatchers.nameStartsWith("waitUntil")))))
+												.and(MethodMatchers.not(MethodMatchers.nameStartsWith("wait")))))
 						    	.intercept(MethodDelegation.to(WebKitInterceptor.class))
 						    	.make()
 						    	.load(WebKitProxy.class.getClassLoader(), ClassLoadingStrategy.Default.WRAPPER)
