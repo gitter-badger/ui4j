@@ -527,4 +527,11 @@ public class ElementTest {
         Element div = document.parseHTML("<div><label>Name</label><div><input id='txtName' /><span><input id='txtSurname' /></span></div></div>").get(0);
         Assert.assertEquals("txtName", div.closest("input").getId());
     }
+
+    @Test public void t47_nextSibling() {
+        Element span = document.parseHTML("<span><div>foo bar</div> my text</span>").get(0);
+        Element div = span.query("div");
+        Assert.assertEquals("div", div.getTagName());
+        Assert.assertEquals(" my text", div.getNextSibling().getText());
+    }
 }

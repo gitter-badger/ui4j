@@ -178,5 +178,7 @@ public interface Element extends Node {
 
     boolean isEmpty();
 
+    Element getNextSibling();
+
     Element closest(String selector);
 }

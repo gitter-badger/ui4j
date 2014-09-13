@@ -853,6 +853,14 @@ public class WebKitElement implements Element, EventTarget {
     }
 
     @Override
+    public Element getNextSibling() {
+        HTMLElementImpl el = getHtmlElement();
+        Node sibling = el.getNextSibling();
+        Element element = ((WebKitPageContext) context).createElement(sibling, document, engine);
+        return element;
+    }
+
+    @Override
     public String toString() {
         return "WebKitElement [element=" + this.getInnerHTML() + "]";
     }
