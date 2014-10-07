@@ -1,46 +1,49 @@
 Ui4j
 ====
 
-Ui4j is a Web automation library for Java. Its a thin wrapper library arround JavaFx WebKit Engine.
+Ui4j is a web-automation library for Java. It is a thin wrapper library around the JavaFx WebKit Engine, and can be used for automating the use of web pages and for testing web pages.
 
-It could be used for Web Automation and Web Testing.
 
 Supported Java Versions
 -----------------------
 
-Oracle Java 8
+Oracle Java 8.
 
-Both JRE and JDK is suitable to use this library.
+Both the JRE and the JDK are suitable for use with this library.
+
 
 Licensing
 ---------
-Ui4j released uner the terms of the MIT License (MIT).
 
-You are free to use any Ui4j project in any other project (even commercial projects) as long as the copyright header is left intact.
+Ui4j is released under the terms of the MIT License (MIT).
+
+You are free to use Ui4j or any of its constituent parts in any other project (even commercial projects) so long as its copyright headers are left intact.
 
 
 Stability
 ---------
-This library is not suitable run for productions system, but you could use for testing purpose.
 
-Wait until 1.0 release for using production systems.
+This library is not currently considered suitable for use in production systems, but can be used for testing purposes.
+
+Please wait until the 1.0 release before using for production systems.
 
 
 Supported Platforms
 -------------------
-Ui4j tested under Windows 8.1 and Ubuntu 14.04 and probably will be run under all platforms thats supported by Java 8.
+
+Ui4j has been tested under Windows 8.1 and Ubuntu 14.04, but should work on any platform where a Java 8 JRE or JDK is available.
 
 
 Headless Mode
 -------------
-Ui4j could be run under headless mode with using Xfvb.
+
+Ui4j can be run in "headless" mode using Xfvb.
 
 
 Sample Code
 -----------
 
-Here is a very basic sample to show hello, world! message.
-Check the ui4j-sample project for more sample code snippets.
+Here is a very basic sample program that uses Ui4j to display a web page with a "hello, world!" message. See the ui4j-sample project for more sample code snippets.
 
 ```
 package com.ui4j.sample;
