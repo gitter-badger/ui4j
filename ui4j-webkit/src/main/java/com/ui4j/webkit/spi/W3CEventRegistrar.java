@@ -8,8 +8,9 @@ import org.w3c.dom.events.EventListener;
 
 import com.ui4j.api.dom.EventTarget;
 import com.ui4j.api.event.EventHandler;
-import com.ui4j.spi.PageContext;
 import com.ui4j.spi.EventRegistrar;
+import com.ui4j.spi.PageContext;
+import com.ui4j.webkit.dom.WebKitDocument;
 import com.ui4j.webkit.dom.WebKitElement;
 import com.ui4j.webkit.dom.WebKitEventListener;
 
@@ -25,6 +26,9 @@ public class W3CEventRegistrar implements EventRegistrar {
 
     @Override
     public void register(EventTarget node, String event, EventHandler handler) {
+        if (node instanceof WebKitDocument) {
+            node = ((WebKitDocument) node).getBody().getParent();
+        }
         if (node instanceof WebKitElement) {
             WebKitElement elementImpl = (WebKitElement) node;
             WebKitEventListener listener = new WebKitEventListener(elementImpl, context, event, handler);
@@ -36,6 +40,9 @@ public class W3CEventRegistrar implements EventRegistrar {
 
     @Override
     public void unregister(EventTarget node, String event, EventHandler handler) {
+        if (node instanceof WebKitDocument) {
+            node = ((WebKitDocument) node).getBody().getParent();
+        }
         if (node instanceof WebKitElement) {
             WebKitElement elementImpl = (WebKitElement) node;
             EventListener listener = listeners.get(handler);
