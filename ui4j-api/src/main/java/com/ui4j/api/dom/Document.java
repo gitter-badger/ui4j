@@ -27,4 +27,6 @@ public interface Document {
     List<Element> parseHTML(String html);
 
     void trigger(String eventType, Element element);
+
+    Element getElementFromPoint(int x, int y);
 }

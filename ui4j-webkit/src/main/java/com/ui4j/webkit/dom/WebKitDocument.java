@@ -133,4 +133,11 @@ public class WebKitDocument implements Document, EventTarget {
         WebKitElement elementImpl = (WebKitElement) element;
         elementImpl.getHtmlElement().dispatchEvent(event);
     }
+
+    @Override
+    public Element getElementFromPoint(int x, int y) {
+        com.sun.webkit.dom.DocumentImpl doc = (com.sun.webkit.dom.DocumentImpl) getEngine().getDocument();
+        Element element = ((WebKitPageContext) context).createElement(doc.elementFromPoint(x, y), this, engine);
+        return element;
+    }
 }
