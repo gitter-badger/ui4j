@@ -14,6 +14,10 @@ public class EventAdapter implements DomEvent {
 
     private int offsetY;
 
+    private int clientX;
+
+    private int clientY;
+
     public EventAdapter(String type, Element target, Element currentTarget) {
         this.type = type;
         this.target = target;
@@ -53,10 +57,27 @@ public class EventAdapter implements DomEvent {
         return offsetY;
     }
 
+    public int getClientX() {
+        return clientX;
+    }
+
+    public void setClientX(int clientX) {
+        this.clientX = clientX;
+    }
+
+    public int getClientY() {
+        return clientY;
+    }
+
+    public void setClientY(int clientY) {
+        this.clientY = clientY;
+    }
+
     @Override
     public String toString() {
         return "EventAdapter [type=" + type + ", target=" + target
                 + ", currentTarget=" + currentTarget + ", offsetX=" + offsetX
-                + ", offsetY=" + offsetY + "]";
+                + ", offsetY=" + offsetY + ", clientX=" + clientX
+                + ", clientY=" + clientY + "]";
     }
 }

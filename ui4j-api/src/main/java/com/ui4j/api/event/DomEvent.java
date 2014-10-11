@@ -13,4 +13,8 @@ public interface DomEvent {
     int getOffsetX();
 
     int getOffsetY();
+
+    int getClientX();
+
+    int getClientY();
 }

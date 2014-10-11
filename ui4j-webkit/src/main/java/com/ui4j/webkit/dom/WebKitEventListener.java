@@ -4,6 +4,7 @@ import netscape.javascript.JSObject;
 
 import org.w3c.dom.Node;
 import org.w3c.dom.events.EventListener;
+import org.w3c.dom.events.MouseEvent;
 
 import com.sun.webkit.dom.MouseEventImpl;
 import com.sun.webkit.dom.NodeImpl;
@@ -54,6 +55,12 @@ public class WebKitEventListener implements EventListener {
 
             ui4jEvent.setOffsetX(offsetX);
             ui4jEvent.setOffsetY(offsetY);
+
+            if (evt instanceof MouseEvent) {
+                MouseEvent me = (MouseEvent) evt;
+                ui4jEvent.setClientX(me.getClientX());
+                ui4jEvent.setClientY(me.getClientY());
+            }
         }
         handler.handle(ui4jEvent);
     }
