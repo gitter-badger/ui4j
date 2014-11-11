@@ -23,10 +23,28 @@ You are free to use Ui4j or any of its constituent parts in any other project (e
 Stability
 ---------
 
-This library is not currently considered suitable for use in production systems, but can be used for testing purposes.
+This library is suitable for use in production systems.
 
-Please wait until the 1.0 release before using for production systems.
 
+If you have found a defect or you want to request a feature enhancement an issue report is the way to bring the attention to the Ui4j Community.
+
+
+Integration with Maven
+----------------------
+
+To use the official release of Ui4j, please use the following snippet in your pom.xml
+
+```xml
+    <dependency>
+        <groupId>com.ui4j</groupId>
+        <artifactId>ui4j-all</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+```
+
+Using Ui4j without Maven
+------------------------
+If you use Ui4j without Maven, download [pre built jar file](https://repo1.maven.org/maven2/com/ui4j/ui4j-all/1.0.0/ui4j-all-1.0.0.jar).
 
 Supported Platforms
 -------------------
@@ -45,7 +63,7 @@ Sample Code
 
 Here is a very basic sample program that uses Ui4j to display a web page with a "hello, world!" message. See the ui4j-sample project for more sample code snippets.
 
-```
+```java
 package com.ui4j.sample;
 
 import com.ui4j.api.browser.BrowserEngine;
