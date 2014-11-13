@@ -90,12 +90,6 @@ public class HelloWorld {
 
 Here is another sampe code that list all front page news from Hacker News.
 
-package com.ui4j.sample;
-
-import com.ui4j.api.browser.BrowserEngine;
-import com.ui4j.api.browser.BrowserFactory;
-import com.ui4j.api.browser.Page;
-
 ```java
 package com.ui4j.sample;
 
