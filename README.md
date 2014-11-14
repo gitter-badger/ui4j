@@ -57,6 +57,17 @@ Headless Mode
 
 Ui4j can be run in "headless" mode using Xfvb.
 
+Logging
+-------
+Both simple logger for java (SLF4J) and Java utility logger (JUL) is supported.
+If slf4j is available on classpath com.ui4j.api.util.LoggerFactory use slf4j else java utility logger is used.
+
+CSS Selector Engine
+-------------------
+Ui4j use W3C selector engine which is default selector engine of WebKit. Alternatively [Sizzle](http://http://sizzlejs.com) selector engine might be used.
+Sizzle is the css selector engine of JQuery and it supports extra selectors like :has(div), :text, containts(text) etc.
+Check ui4-sample/Sizzle.java for using sizzle with Ui4j.
+
 
 Sample Code
 -----------
