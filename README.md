@@ -1,7 +1,7 @@
 Ui4j
 ====
 
-[![Download](http://img.shields.io/badge/download-latest--jar-orange.svg)](https://repo1.maven.org/maven2/com/ui4j/ui4j-all/1.0.0/ui4j-all-1.0.0.jar) [![Version](http://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/ui4j/ui4j) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+[![Download](http://img.shields.io/badge/download-latest--jar-orange.svg)](https://repo1.maven.org/maven2/com/ui4j/ui4j-all/1.0.1/ui4j-all-1.0.1.jar) [![Version](http://img.shields.io/badge/version-1.0.1-green.svg)](https://github.com/ui4j/ui4j) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 
 Ui4j is a web-automation library for Java. It is a thin wrapper library around the JavaFx WebKit Engine, and can be used for automating the use of web pages and for testing web pages.
@@ -42,13 +42,13 @@ To use the official release of Ui4j, please use the following snippet in your po
     <dependency>
         <groupId>com.ui4j</groupId>
         <artifactId>ui4j-all</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </dependency>
 ```
 
 Using Ui4j without Maven
 ------------------------
-If you use Ui4j without Maven, download [pre built jar file](https://repo1.maven.org/maven2/com/ui4j/ui4j-all/1.0.0/ui4j-all-1.0.0.jar).
+If you use Ui4j without Maven, download [pre built jar file](https://repo1.maven.org/maven2/com/ui4j/ui4j-all/1.0.1/ui4j-all-1.0.1.jar).
 
 Supported Platforms
 -------------------
@@ -151,6 +151,6 @@ See [JavaScriptExecution.java](https://github.com/ui4j/ui4j/blob/master/ui4j-sam
 See [DialogTest.java](https://github.com/ui4j/ui4j/blob/master/ui4j-webkit/src/test/java/com/ui4j/test/DialogTest.java) for custom handlers or
 use default handlers from [Dialogs.java](https://github.com/ui4j/ui4j/blob/master/ui4j-api/src/main/java/com/ui4j/api/dialog/Dialogs.java).
 
-#### what is the easiest way clear all input elements?
+#### What is the easiest way clear all input elements?
 
 Use [clear](https://github.com/ui4j/ui4j/blob/master/ui4j-api/src/main/java/com/ui4j/api/dom/Form.java#L13) method of the Form class.
