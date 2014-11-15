@@ -50,7 +50,7 @@ public class WebKitPageContext implements PageContext {
 
     private WebKitProxy pageFactory;
 
-    public static class ErrorEventHandlerImpl implements EventHandler<WebErrorEvent> {
+    public static class DefaultErrorEventHandler implements EventHandler<WebErrorEvent> {
 
         private Logger log = LoggerFactory.getLogger(getClass());
 
@@ -120,11 +120,11 @@ public class WebKitPageContext implements PageContext {
 
     public Document createDocument(JavaScriptEngine engine) {
         WebEngine webEngine = (WebEngine) engine.getEngine();
-        webEngine.getLoadWorker().exceptionProperty().addListener(new ExceptionListener(log));
-        webEngine.setOnError(new ErrorEventHandlerImpl());
         if (configuration.getUserAgent() != null) {
-            webEngine.setUserAgent(configuration.getUserAgent());
+        	webEngine.setUserAgent(configuration.getUserAgent());
         }
+        webEngine.getLoadWorker().exceptionProperty().addListener(new ExceptionListener(log));
+        webEngine.setOnError(new DefaultErrorEventHandler());
         Document document = (Document) documentFactory.newInstance(new Object[] { this, engine });
         initializeSizzle(document, (WebKitJavaScriptEngine) engine);
         return document;

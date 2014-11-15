@@ -8,6 +8,7 @@ import com.ui4j.api.browser.BrowserEngine;
 import com.ui4j.api.browser.BrowserFactory;
 import com.ui4j.api.browser.BrowserType;
 import com.ui4j.api.browser.Page;
+import com.ui4j.api.browser.PageConfiguration;
 
 public class JavaScriptEngineTest {
 
@@ -16,7 +17,9 @@ public class JavaScriptEngineTest {
     @BeforeClass public static void beforeTest() {
         String url = ElementTest.class.getResource("/TestPage.html").toExternalForm();
         BrowserEngine browser = BrowserFactory.getBrowser(BrowserType.WebKit);
-        page = browser.navigate(url);
+        PageConfiguration config = new PageConfiguration();
+        config.setUserAgent("foo bar");
+		page = browser.navigate(url, config);
     }
 
     @Test public void testBoolean() {
@@ -47,5 +50,9 @@ public class JavaScriptEngineTest {
     @Test public void testUndefined() {
     	Object result = page.executeScript("undefined");
     	Assert.assertEquals("undefined", result);
+    }
+
+    @Test public void testUserAgent() {
+    	Assert.assertEquals("foo bar", page.executeScript("navigator.userAgent"));
     }
 }

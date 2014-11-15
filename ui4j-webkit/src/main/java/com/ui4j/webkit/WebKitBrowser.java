@@ -208,17 +208,20 @@ class WebKitBrowser implements BrowserEngine {
 
         private WebKitJavaScriptEngine engine;
 
+		private PageConfiguration configuration;
+
         public WebViewCreator(String url,
-                                PageContext context, DocumentListener listener) {
-            this(url, context, listener, null);
+                                PageContext context, DocumentListener listener, PageConfiguration configuration) {
+            this(url, context, listener, null, configuration);
         }
 
         public WebViewCreator(String url,
-                PageContext context, DocumentListener listener, CountDownLatch latch) {
+                PageContext context, DocumentListener listener, CountDownLatch latch, PageConfiguration configuration) {
             this.url = url;
             this.latch = latch;
             this.context = context;
             this.listener = listener;
+            this.configuration = configuration;
         }
 
         @SuppressWarnings("unchecked")
@@ -226,6 +229,9 @@ class WebKitBrowser implements BrowserEngine {
         public void run() {
             webView = new WebView();
             engine = new WebKitJavaScriptEngine(webView.getEngine());
+            if (configuration.getUserAgent() != null) {
+            	engine.getEngine().setUserAgent(configuration.getUserAgent());
+            }
             engine.getEngine().load(url);
             WorkerLoadListener loadListener = new WorkerLoadListener(engine, context, listener);
             webView.getEngine().getLoadWorker(). progressProperty().addListener(new ProgressListener(webView.getEngine()));
@@ -263,11 +269,11 @@ class WebKitBrowser implements BrowserEngine {
         SyncDocumentListener adapter = new SyncDocumentListener(documentReadyLatch);
         WebViewCreator creator = null;
         if (Platform.isFxApplicationThread()) {
-            creator = new WebViewCreator(url, context, adapter);
+            creator = new WebViewCreator(url, context, adapter, configuration);
             creator.run();
         } else {
             CountDownLatch webViewLatch = new CountDownLatch(1);
-            creator = new WebViewCreator(url, context, adapter, webViewLatch);
+            creator = new WebViewCreator(url, context, adapter, webViewLatch, configuration);
             Platform.runLater(creator);
             try {
                 webViewLatch.await(10, TimeUnit.SECONDS);
