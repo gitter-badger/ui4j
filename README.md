@@ -124,3 +124,14 @@ public class HackerNews {
     }
 }
 ```
+
+Building Ui4j
+-------------
+mvn install
+
+What's Missing / TODO (contributions happily accepted!)
+-------------------------------------------------------
+
+We are happy to accept documentation and sample usage codes.
+Please do not hesitate to submit pull requests.
+
