@@ -146,7 +146,7 @@ See [UserAgent.java](https://github.com/ui4j/ui4j/blob/master/ui4j-sample/src/ma
 
 See [JavaScriptExecution.java](https://github.com/ui4j/ui4j/blob/master/ui4j-sample/src/main/java/com/ui4j/sample/JavaScriptExecution.java) sample.
 
-#### How can i handle browser login, prompt confirmation dialog?
+#### How can i handle browser login, prompt or confirmation dialog?
 
 See [DialogTest.java](https://github.com/ui4j/ui4j/blob/master/ui4j-webkit/src/test/java/com/ui4j/test/DialogTest.java) for custom handlers or
 use default handlers from [Dialogs.java](https://github.com/ui4j/ui4j/blob/master/ui4j-api/src/main/java/com/ui4j/api/dialog/Dialogs.java).
