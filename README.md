@@ -1,7 +1,7 @@
 Ui4j
 ====
 
-[![Download](http://img.shields.io/badge/download-latest--jar-orange.svg)](https://repo1.maven.org/maven2/com/ui4j/ui4j-all/1.0.0/ui4j-all-1.0.0.jar) [![Version](http://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/ui4j/ui4j) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+[![Download](http://img.shields.io/badge/download-latest--jar-orange.svg)](https://repo1.maven.org/maven2/com/ui4j/ui4j-all/1.0.0/ui4j-all-1.0.0.jar) [![Version](http://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/ui4j/ui4j) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
 
 Ui4j is a web-automation library for Java. It is a thin wrapper library around the JavaFx WebKit Engine, and can be used for automating the use of web pages and for testing web pages.
@@ -34,7 +34,7 @@ If you have found a defect or you want to request a feature enhancement an issue
 
 Integration with Maven
 ----------------------
-[![Maven](http://img.shields.io/maven-central/v/com.ui4j/ui4j-all.svg)]
+[![Maven](http://img.shields.io/maven-central/v/com.ui4j/ui4j-all.svg)](http://search.maven.org/#search%7Cga%7C1%7Cui4j)
 
 To use the official release of Ui4j, please use the following snippet in your pom.xml
 
@@ -70,13 +70,13 @@ CSS Selector Engine
 -------------------
 Ui4j use W3C selector engine which is default selector engine of WebKit. Alternatively [Sizzle](http://http://sizzlejs.com) selector engine might be used.
 Sizzle is the css selector engine of JQuery and it supports extra selectors like :has(div), :text, containts(text) etc.
-Check ui4-sample/Sizzle.java for using sizzle with Ui4j.
+Check [Sizzle.java](https://github.com/ui4j/ui4j/blob/master/ui4j-sample/src/main/java/com/ui4j/sample/Sizzle.java) for using sizzle with Ui4j.
 
 
-Sample Code
------------
+Usage Examples
+--------------
 
-Here is a very basic sample program that uses Ui4j to display a web page with a "hello, world!" message. See the ui4j-sample project for more sample code snippets.
+Here is a very basic sample program that uses Ui4j to display a web page with a "hello, world!" message. See the [ui4j-sample](https://github.com/ui4j/ui4j/tree/master/ui4j-sample/src/main/java/com/ui4j/sample) project for more sample code snippets.
 
 ```java
 package com.ui4j.sample;
