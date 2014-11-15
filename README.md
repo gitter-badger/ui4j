@@ -1,6 +1,9 @@
 Ui4j
 ====
 
+[![Download](http://img.shields.io/badge/download-latest--jar-orange.svg)](https://repo1.maven.org/maven2/com/ui4j/ui4j-all/1.0.0/ui4j-all-1.0.0.jar) [![Version](http://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/ui4j/ui4j) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+
+
 Ui4j is a web-automation library for Java. It is a thin wrapper library around the JavaFx WebKit Engine, and can be used for automating the use of web pages and for testing web pages.
 
 
@@ -31,6 +34,7 @@ If you have found a defect or you want to request a feature enhancement an issue
 
 Integration with Maven
 ----------------------
+[![Maven](http://img.shields.io/maven-central/v/com.ui4j/ui4j-all.svg)]
 
 To use the official release of Ui4j, please use the following snippet in your pom.xml
 
