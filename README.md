@@ -69,8 +69,8 @@ If slf4j is available on classpath com.ui4j.api.util.LoggerFactory use slf4j els
 CSS Selector Engine
 -------------------
 Ui4j use W3C selector engine which is default selector engine of WebKit. Alternatively [Sizzle](http://http://sizzlejs.com) selector engine might be used.
-Sizzle is the css selector engine of JQuery and it supports extra selectors like :has(div), :text, containts(text) etc.
-Check [Sizzle.java](https://github.com/ui4j/ui4j/blob/master/ui4j-sample/src/main/java/com/ui4j/sample/Sizzle.java) for using sizzle with Ui4j.
+Sizzle is the css selector engine of JQuery and it supports extra selectors like _:has(div)_, _:text_, _containts(text)_ etc.
+Check the [Sizzle.java](https://github.com/ui4j/ui4j/blob/master/ui4j-sample/src/main/java/com/ui4j/sample/Sizzle.java) for using sizzle with Ui4j.
 
 
 Usage Examples
@@ -129,9 +129,28 @@ Building Ui4j
 -------------
 mvn install
 
-What's Missing / TODO (contributions happily accepted!)
--------------------------------------------------------
+Getting help and getting involved
+---------------------------------
 
-We are happy to accept documentation and sample usage codes.
 Please do not hesitate to submit pull requests.
+We are happy to accept documentation and sample code contributions.
 
+FAQ
+---
+
+#### How can i set the user agent string?
+
+See [UserAgent.java](https://github.com/ui4j/ui4j/blob/master/ui4j-sample/src/main/java/com/ui4j/sample/UserAgent.java) sample.
+
+#### How can i execute javascript?
+
+See [JavaScriptExecution.java](https://github.com/ui4j/ui4j/blob/master/ui4j-sample/src/main/java/com/ui4j/sample/JavaScriptExecution.java) sample.
+
+#### How can i handle browser login, prompt confirmation dialog?
+
+See [DialogTest.java](https://github.com/ui4j/ui4j/blob/master/ui4j-webkit/src/test/java/com/ui4j/test/DialogTest.java) for custom handlers or
+use default handlers from [Dialogs.java](https://github.com/ui4j/ui4j/blob/master/ui4j-api/src/main/java/com/ui4j/api/dialog/Dialogs.java).
+
+#### How can i clear all input elements?
+
+Use [clear](https://github.com/ui4j/ui4j/blob/master/ui4j-api/src/main/java/com/ui4j/api/dom/Form.java#L13) method of the Form class.
