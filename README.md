@@ -151,6 +151,6 @@ See [JavaScriptExecution.java](https://github.com/ui4j/ui4j/blob/master/ui4j-sam
 See [DialogTest.java](https://github.com/ui4j/ui4j/blob/master/ui4j-webkit/src/test/java/com/ui4j/test/DialogTest.java) for custom handlers or
 use default handlers from [Dialogs.java](https://github.com/ui4j/ui4j/blob/master/ui4j-api/src/main/java/com/ui4j/api/dialog/Dialogs.java).
 
-#### How can i clear all input elements?
+#### what is the easiest way clear all input elements?
 
 Use [clear](https://github.com/ui4j/ui4j/blob/master/ui4j-api/src/main/java/com/ui4j/api/dom/Form.java#L13) method of the Form class.

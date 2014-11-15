@@ -12,13 +12,13 @@ class WebKitHtmlParser {
 
     private JavaScriptEngine engine;
 
-    static class NodeListImpl implements NodeList {
+    static class DefaultNodeList implements NodeList {
 
         private JSObject obj;
 
         private int length;
 
-        public NodeListImpl(JSObject obj) {
+        public DefaultNodeList(JSObject obj) {
             this.obj = obj;
             this.length = Integer.parseInt(obj.getMember("length").toString());
         }
@@ -42,7 +42,7 @@ class WebKitHtmlParser {
     	JSObject wrapperDiv = (JSObject) engine.executeScript("document.createElement('div')");
     	wrapperDiv.setMember("innerHTML", html);
     	JSObject childNodes = (JSObject) wrapperDiv.getMember("childNodes");
-        NodeList list = new NodeListImpl(childNodes);
+        NodeList list = new DefaultNodeList(childNodes);
         return list;
     }
 }
