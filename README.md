@@ -1,5 +1,6 @@
 Ui4j
 ====
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ui4j/ui4j?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Download](http://img.shields.io/badge/download-latest--jar-orange.svg)](https://repo1.maven.org/maven2/com/ui4j/ui4j-all/1.0.1/ui4j-all-1.0.1.jar) [![Version](http://img.shields.io/badge/version-1.0.1-green.svg)](https://github.com/ui4j/ui4j) [![License](http://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
